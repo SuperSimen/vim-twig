@@ -16,4 +16,6 @@ else
   let b:undo_ftplugin = "setlocal comments< formatoptions<"
 endif
 
+set syntax=html.twig
+
 " vim:set sw=2:
