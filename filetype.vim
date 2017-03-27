@@ -26,7 +26,7 @@ function! s:Setf(filename)
 
   if !strlen(&ft)
     " Default to HTML twig template.
-    let ft = 'html.twig'
+    let ft = '.twig'
   else
     let ft = &ft . (&ft =~ '\<twig\>' ? '' : '.twig')
   endif
