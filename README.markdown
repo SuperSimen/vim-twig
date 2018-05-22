@@ -17,8 +17,8 @@ This scripts bundles is compatible with [vim-addon-manager][3]
 You can also install (locally) using [Pathogen][4]:
 
 ```sh
-$ cd .vim/bundle/
-$ git clone <repo>
+mkdir -p ~/.vim/bundle/vim-twig &&
+git clone https://github.com/lumiliet/vim-twig ~/.vim/bundle/vim-twig
 ```
 
 ## Changes
