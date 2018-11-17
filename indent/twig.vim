@@ -20,7 +20,12 @@ fun! GetTwigIndent(currentLineNumber)
 		return indent(previousOpenStructureNumber)
 	endif
 
-    return s:CallBaseIndent()
+    let indent = s:CallBaseIndent()
+    " Restore indentexpr 
+    setlocal indentexpr=GetTwigIndent(v:lnum)
+    " Restore twig syntax.
+    unlet b:main_syntax | runtime! syntax/twig.vim
+    return indent
 endf
 
 function! s:CallBaseIndent()
